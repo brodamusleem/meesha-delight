@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_shipping" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <title>meesha delight</title>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">meesha delight</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallerea">gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+<!-- home section -->
+
+    <section id="#home" class="home">
+        <div class="container1">
+            <div class="box1">
+                <p id="p1">Welcome to meesha delight  your ultimate destination for delicious food delivery!</p>
+                <p id="p2">We specialize in bringing you the best of</p> 
+                <span id="typed"></span>
+                <p id="p3">all crafted with the freshest ingredients and bursting with flavor.</p> 
+                
+                </div>
+        </div>
+    </section>
+
+<!-- services section -->    
+
+    <h1>our services</h1>
+    <section class="services" id="services">
+        <div class="service-item">
+            <i class="fa fa-light fa-truck fa-beat-fade" style="color: green;"></i>
+             
+           <h3>Fast Delivery</h3>
+           <p>Enjoy quick and reliable food delivery straight to your door. Whether you’re at home, at work, or anywhere, we bring your favorite meals to you in no time!</p>
+        </div>
+        
+        <div class="service-item">
+            <i class="fa fa-pepper-hot" style="color: red;"></i>
+           <h3>Delicious Recipes</h3>
+           <p>Explore a wide range of tasty recipes, from comfort food to healthy options, all carefully curated by our culinary team. Get inspired and create your own meals!</p>
+        </div>
+        
+        <div class="service-item">
+            <i class="fa fa-bowl-food"></i>  
+            
+            <i class="fa fa-bowl-food"></i>
+
+          <h3>Fresh Meals</h3>
+          <p>We deliver freshly prepared meals made with high-quality ingredients. Whether you’re in the mood for a hearty dish or a light snack, we have something for everyone!</p>
+        </div>
+      </section>
+
+     <!-- gellery section -->
+
+     <h1 >our gallery</h1>
+     <section class="gallery" id="gallerea">
+         
+         <div class="slider-container">
+             <div class="slider">
+                 <div class="slide">
+                     <img src="images/burger1.jpeg" alt="Image 1">
+                     <button class="myp1">Add burger</button>
+                 </div>
+                 <div class="slide">
+                     <img src="images/masa1.jpg" alt="Image 2">
+                     <button class="myp1" >Add masa</button>
+                 </div>
+                 <div class="slide">
+                     <img src="images/shawmarma2.jpeg" alt="Image 3">
+                     <button class="myp1" >Add shawmarma</button>
+                 </div>
+                 <div class="slide">
+                     <img src="images/masa2.jpg" alt="Image 4">
+                     <button class="myp1" >Add masa</button>
+                 </div>
+                 <div class="slide">
+                     <img src="images/burger2.jpeg" alt="Image 5">
+                     <button class="myp1" >Add burger</button>
+                 </div>
+                 <div class="slide">
+                     <img src="images/shawmarma4.jpeg" alt="Image 6">
+                     <button class="myp1" >Add shawarma</button>
+                 </div>
+             </div>
+         </div>
+         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+         <button class="next" onclick="moveSlide(1)">&#10095;</button>
+     </section>
+
+     <!--footer section-->
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- First Div: Socials -->
+        <div class="footer-section socials">
+            <h3>Socials</h3>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Second Div: Contact Us -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <div class="contact-icons">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:brodamusleem@gmail.com">brodamusleem@gmail.com</a></p>
+                <p><i class="fas fa-phone-alt"></i> 7080060772</p>
+                <p><i class="fas fa-map-marker-alt"></i>kano city</p>
+            </div>
+        </div>
+
+        <!-- Third Div: Feedback -->
+        <div class="footer-section feedback">
+            <h3>Feedback</h3>
+            <textarea id="myt" placeholder="Write your feedback here..."></textarea>
+            <button id="btns" type="submit">Submit</button>
+        </div>
+    </div>
+    <hr>
+    <p class="hr"> &copy; All right reserved 2024 </p>
+</footer>
+     
+    <script src="index.js"></script>
+</body>
+</html>

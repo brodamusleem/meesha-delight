@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.logo{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 40px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: chocolate;
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+}
+.home{
+    background-image: url(images/background.jpeg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box1{
+    width: 50%;
+    text-align: center;
+    margin-top: 200px;
+}
+p{
+    font-family: "Teko", sans-serif;
+    font-size: 40px;
+    color: white;
+}
+#typed{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 40px;
+    color: rgb(209, 10, 10);
+
+}
+
+/* services section */
+
+.services {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .service-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  /* Increase the icon size */
+.fa {
+  font-size: 48px;
+  margin: 20px;
+}
+
+.service-item:hover{
+    background-color: #33333349;
+    color: white;
+   
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-list {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            right: 0; /* Align to the right */
+            background: #333;
+            text-align: center; /* Align text to the right */
+            padding: 20px; 
+            gap: 20px;/* Space around the nav list */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    
+    }
+   
+    .logo{
+        font-size: 25px;
+    }
+    .nav-list:hover{
+        color: white;
+        
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    p{
+        
+        font-size: 30px;
+
+    }
+    .box1{
+        margin-top: 240px;
+    }
+    #typed{
+        font-size: 35px;
+        color: rgb(209, 10, 10);
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .service-item {
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+
+
+   
+}
+
+
+
+/* universe h1 */
+
+h1{
+    font-family: "Rubik Wet Paint", system-ui; ;
+    text-align: center;
+    margin: 30px;
+    font-size: 50px;
+
+}
+
+
+/* Gallery Section */
+.gallery {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    perspective: 1500px; /* This gives the 3D effect */
+     /* Background color */
+    background-image:url(images/blurlight.jpeg) ;
+    background-size: cover;  /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    padding: 50px 0; /* Add padding around the gallery */
+    border-radius: 10px; /* Optional: rounded corners for the gallery */
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+img {
+    width: 400px;   /* Default width for large screens */
+    height: 250px;  /* Default height for large screens */
+    object-fit: cover; /* Ensures images don't stretch */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 10px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 30px;  /* Adjust left button position */
+}
+
+.next {
+    right: 30px; /* Adjust right button position */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+.myp1{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.281);
+    cursor: pointer;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    display: flex;
+    align-items: center;
+
+    
+}
+.myp1:hover{
+    background-color:rgba(255, 0, 0, 0.137); ;
+}
+
+
+/* Responsive: For smaller screens */
+@media (max-width: 768px) {
+    .gallery {
+        width: 90%;
+    }
+    img {
+        width: 250px;  /* Reduce image width on smaller screens */
+        height: 150px; /* Reduce image height on smaller screens */
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Adjust button size for smaller screens */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 200px;  /* Further reduce image width on very small screens */
+        height: 120px; /* Further reduce image height */
+    }
+
+    .prev, .next {
+        font-size: 1.2rem; /* Smaller buttons on very small screens */
+        padding: 6px;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Section Styles */
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Social Icons */
+.socials .social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.socials .social-icons a:hover {
+    color: #ddd;
+}
+
+/* Contact Icons */
+.contact .contact-icons p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.contact .contact-icons i {
+    margin-right: 10px;
+}
+
+/* Feedback Textarea and Button */
+.feedback textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.feedback button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background-color: #005f7f;
+}
+ 
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    footer{
+        margin: 30px;
+        border-radius: 10px;
+    }
+}
+.hr{
+    text-align: center;
+    color: black;
+}
+
